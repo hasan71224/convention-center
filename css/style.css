@@ -1,3 +1,6 @@
 body{
     font-family: 'Poppins', sans-serif !important;
 }
+.translate-middle {
+    transform: translate(-100%,-200%)!important;
+}
