@@ -18,6 +18,7 @@
 
 <body>
     <header>
+
         <!-- navigation part start -->
         <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
             <div class="container-fluid container">
@@ -83,6 +84,20 @@
         <!-- slider part end -->
     </header>
     <main>
+        
+        <!-- toast section start -->
+        <div class="toast border-5 border-primary border-start-0 border-top-0 border-bottom-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <img src="images/people.png" class="rounded me-2" alt="..." height="20px" width="20px">
+              <strong class="me-auto">Bootstrap</strong>
+              <small>11 mins ago</small>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+              Hello, world! This is a toast message.
+            </div>
+        </div>
+        <!-- toast section end -->
         <!-- our packages section start -->
         <section class="container my-5" id="package">
             <h3 class="text-center fw-bold ">Our package</h3>
@@ -262,13 +277,24 @@
                 </div>
                 <div>
                     <h4 class="py-2 text-white">Get the App</h4>
-                    <img src="images/apple-store.png" height="40px" width="135px" alt=""> <br> <br>
-                    <img src="images/google-play.png" height="40px" width="135px" alt="">
+                    <a href="https://www.apple.com/app-store/" target="_blank"><img src="images/apple-store.png" height="40px" width="135px" alt="" href=></a> <br> <br>
+                    <a href="https://play.google.com/store/apps" target="_blank"><img src="images/google-play.png" height="40px" width="135px" alt="" href=></a>
+                    
                 </div>
             </div>
         </section>
     </footer>
+
     <!-- link with js -->
     <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- script tag for toast -->
+    <script>
+        window.onload = (event) =>{
+            let myAlert = document.querySelector('.toast');
+            let bsAlert = new bootstrap.Toast(myAlert);
+            bsAlert.show();
+        }
+    </script>
 </body>
 </html>
